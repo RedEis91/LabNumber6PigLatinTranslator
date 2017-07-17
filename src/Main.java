@@ -14,24 +14,42 @@ public class Main {
         String newWord = word.toLowerCase();
         newWord.toCharArray();
         // computating stuff
-        System.out.println("*ocessingpray*");
-        System.out.println(" ");
-        System.out.println("*anslatingtray*");
-        System.out.println(" ");
-        ordway(newWord);
-
-    }
-
-    public static void ordway(String newWord) {
+//        System.out.println("*ocessingpray*");
+//        System.out.println(" ");
+//        System.out.println("*anslatingtray*");
+//        System.out.println(" ");
         int lengthOfWord = newWord.length();
-        newWord.startsWith("a" || "e" || "i")
-        char[] ordWay = new char[lengthOfWord];
-        for (int i = 0; i <= (lengthOfWord - 1); i++) {
-            ordWay[i] = newWord.charAt(i);
-            if ((String)ordWay[i].contains('a', 'e', 'i', 'o', 'u'));
+        if (howmanychars(newWord, lengthOfWord) == true) {
+        } else {
+            System.out.println(newWord + "way");
         }
 
-
-
     }
+
+    public static boolean howmanychars(String newWord, int lengthOfWord) {
+        int numberOfChars = 0;
+
+        for (int i = 0; i <= lengthOfWord; i++)
+            {
+                if (newWord.charAt(i) != 'a' && newWord.charAt(i) != 'e' && newWord.charAt(i) != 'i' && newWord.charAt(i) != 'o' && newWord.charAt(i) != 'u')
+                    {
+                        numberOfChars = i + 1;
+                    }
+                else {
+                    numberOfChars = numberOfChars;
+                    break;
+                    }
+            }
+            CharSequence pigLatinWord = newWord.substring(numberOfChars) + newWord.substring(0, numberOfChars) + "ay";
+        System.out.println(pigLatinWord);
+        if (pigLatinWord != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+//    public static void main(String[] args) {
+//
+//    }
 }
