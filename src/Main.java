@@ -19,16 +19,13 @@ public class Main {
 //        System.out.println("*anslatingtray*");
 //        System.out.println(" ");
         int lengthOfWord = newWord.length();
-        if (howmanychars(newWord, lengthOfWord) == true) {
-        } else {
-            System.out.println(newWord + "way");
-        }
+       pigLatin(newWord, lengthOfWord);
 
     }
 
-    public static boolean howmanychars(String newWord, int lengthOfWord) {
+    public static void pigLatin(String newWord, int lengthOfWord) {
         int numberOfChars = 0;
-
+        CharSequence pigLatinWord;
         for (int i = 0; i <= lengthOfWord; i++)
             {
                 if (newWord.charAt(i) != 'a' && newWord.charAt(i) != 'e' && newWord.charAt(i) != 'i' && newWord.charAt(i) != 'o' && newWord.charAt(i) != 'u')
@@ -40,13 +37,13 @@ public class Main {
                     break;
                     }
             }
-            CharSequence pigLatinWord = newWord.substring(numberOfChars) + newWord.substring(0, numberOfChars) + "ay";
+                if (numberOfChars != 0) {
+                    pigLatinWord = newWord.substring(numberOfChars) + newWord.substring(0, numberOfChars) + "ay"; }
+                else {
+                    pigLatinWord = newWord + "way";
+            }
         System.out.println(pigLatinWord);
-        if (pigLatinWord != null) {
-            return true;
-        } else {
-            return false;
-        }
+
     }
 
 //    public static void main(String[] args) {
