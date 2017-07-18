@@ -5,20 +5,40 @@ public class Main {
         // scanner to take in input
         Scanner scan = new Scanner(System.in);
         //greets user with instructions
-
+        String contin;
         System.out.println("*Pig Latin Translator Engaged*");
-        System.out.print("Please enter a word to translate: ");
-        //1) take in string as word
-        //takes input from user and stores word in 'word' variable
-        String word = scan.nextLine();
-        // convert word string to lowercase
-        String lowerCaseWord = word.toLowerCase();
-        String[] words = lowerCaseWord.split(" ");
-        int lengthOfWords = words.length;
-        for (String word1 : words) {
-            String translation = pigLatin(word1, lengthOfWords);
-            System.out.print(translation + " ");
-        }
+        System.out.println(" ");
+        do {
+            System.out.println("Please enter a word or phrase to translate: ");
+            System.out.println(" ");
+            //1) take in string as word
+            //takes input from user and stores word in 'word' variable
+            String word = scan.nextLine();
+            System.out.println(" ");
+            // convert word string to lowercase
+            String lowerCaseWord = word.toLowerCase();
+            System.out.println("...ocessingpray...");
+            System.out.println(" ");
+            System.out.println("...omputingcay...");
+            System.out.println(" ");
+            String[] words = lowerCaseWord.split(" ");
+            int lengthOfWords = words.length;
+            System.out.println("'" +lowerCaseWord + "'" + " in pig latin is: ");
+            System.out.println(" ");
+            for (String word1 : words) {
+                String translation = pigLatin(word1, lengthOfWords);
+                System.out.print(translation + " ");
+            }
+            System.out.println(" ");
+            System.out.println(" ");
+            System.out.println("Translate another word?");
+            System.out.println(" ");
+            contin = scan.nextLine();
+            System.out.println(" ");
+        } while (contin.contains("y") || contin.contains("Y"));
+        System.out.println("Ankthay uuyay orfay ayingplay!");
+        System.out.println(" ");
+        System.out.println(" =D ");
     }
 
     public static String pigLatin(String word1, int lengthOfWords) {
