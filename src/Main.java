@@ -5,20 +5,35 @@ public class Main {
         // scanner to take in input
         Scanner scan = new Scanner(System.in);
         //greets user with instructions
+
         System.out.println("*Pig Latin Translator Engaged*");
         System.out.print("Please enter a word to translate: ");
+        //1) take in string as word
         //takes input from user and stores word in 'word' variable
         String word = scan.nextLine();
         System.out.println(" ");
+        //2) create integer variable Spaces to hold # of space characters (with character following)
+        int spaces;
         // convert word string to lowercase
         String newWord = word.toLowerCase();
-        newWord.toCharArray();
-        // computating stuff
-//        System.out.println("*ocessingpray*");
-//        System.out.println(" ");
-//        System.out.println("*anslatingtray*");
-//        System.out.println(" ");
+        char[] newWords = newWord.toCharArray();
         int lengthOfWord = newWord.length();
+        int[] numberOfSpaces = new int[lengthOfWord];
+        // 3) parse thru string for spaces and count # of spaces (with character following)
+        for (char word1: newWords) {
+
+               if (word1 != ' ')  {
+                   numberOfSpaces[()] = 0;
+               } else if
+            }
+        }
+        //4) every instance of a space (with character following)  will be the start of a new word
+        //5) create array with a size based on # of Spaces
+        //6) if # of spaces > 0, create substrings from original word starting with 0, indexOf(first space)-1
+        //then indexOf(first space)+1, indexOf(second space)-1
+        //then indexOf(second space)+1, indexOf(third space)-1
+        //7)store substrings in wordsToTranslate array
+        //8)loop thru words in wordsToTranslate array, for each word run:
        pigLatin(newWord, lengthOfWord);
 
     }
